@@ -3,11 +3,10 @@
 
 import random
 import asyncio
-from typing import Awaitable
 
 
-async def wait_random(max_delay: int = 10) -> Awaitable[float]:
+async def wait_random(max_delay: int = 10) -> float:
     """Takes an integer argument, generates and return float"""
-    number = random.uniform(0, max_delay)
+    number: float = random.uniform(0, max_delay)
     await asyncio.sleep(number)
     return number
